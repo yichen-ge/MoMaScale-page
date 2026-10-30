@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MoMaScale unifies next-scale and masked autoregression for text-to-motion generation, combining coarse-to-fine structure with iterative motion refinement.">
+  <meta name="theme-color" content="#f7f9ff">
+  <meta property="og:title" content="MoMaScale — Text-to-Motion Generation">
+  <meta property="og:description" content="Unifying Next-Scale and Masked Autoregression for Text-to-Motion Generation">
+  <meta property="og:type" content="website">
+  <title>MoMaScale | Text-to-Motion Generation</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav aria-label="Main navigation"><a href="#abstract">Abstract</a><a href="#gallery">Gallery</a><a href="#method">Method</a><a href="#results">Results</a><a href="#comparison">Comparisons</a></nav>
+    <a class="header-link" href="#citation">Cite this work <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero container" aria-labelledby="paper-title">
+      <h1 id="paper-title">Unifying Next-Scale and Masked Autoregression<br class="desktop-break"> for Text-to-Motion Generation</h1>
+      <!-- Fill in the accepted conference/venue here when available. -->
+      <p id="publication-venue" class="publication-venue" aria-label="Publication venue"></p>
+      <div class="authors" aria-label="Authors">
+        <span>Liping Zhu<sup>1</sup></span><span>Yichen Ge<sup>1,*,†</sup></span><span>Chengyang Li<sup>1,*,†</sup></span><span>Jian Gao<sup>1</sup></span><span>Hao Li<sup>2</sup></span><span>Xu Liu<sup>1</sup></span><span>Boqiang Liang<sup>1</sup></span><span>Xiaojie Lin<sup>1</sup></span><span>Heng Zhou<sup>3</sup></span>
+      </div>
+      <div class="affiliations"><p><sup>1</sup> College of Artificial Intelligence, China University of Petroleum (Beijing), China</p><p><sup>2</sup> School of Computer Science and Technology, Xidian University, China</p><p><sup>3</sup> School of Artificial Intelligence and Computer Science, Jiangnan University, China</p></div>
+      <p class="author-notes">* Equal contribution &nbsp; · &nbsp; † Corresponding authors</p>
+      <div class="hero-actions" aria-label="Research resources">
+        <!-- Add href to each resource and remove aria-disabled when the URL is ready. -->
+        <a class="button resource-link" role="link" aria-disabled="true" data-resource="paper"><span class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h6"/></svg></span><span>Paper <small>Coming soon</small></span></a>
+        <a class="button resource-link" role="link" aria-disabled="true" data-resource="code"><span class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" focusable="false"><path d="M12 .75a11.25 11.25 0 0 0-3.558 21.923c.563.104.769-.244.769-.542 0-.267-.01-.975-.015-1.913-3.13.68-3.79-1.508-3.79-1.508-.511-1.3-1.249-1.646-1.249-1.646-1.022-.699.078-.685.078-.685 1.13.08 1.725 1.16 1.725 1.16 1.004 1.722 2.634 1.225 3.275.937.102-.728.393-1.225.715-1.507-2.499-.284-5.126-1.25-5.126-5.563 0-1.229.44-2.233 1.16-3.02-.116-.284-.503-1.43.11-2.981 0 0 .945-.303 3.094 1.153a10.786 10.786 0 0 1 5.624 0c2.149-1.456 3.092-1.153 3.092-1.153.615 1.55.228 2.697.112 2.981.722.787 1.158 1.791 1.158 3.02 0 4.324-2.631 5.276-5.138 5.555.404.35.766 1.042.766 2.1 0 1.518-.014 2.743-.014 3.116 0 .3.203.65.774.54A11.252 11.252 0 0 0 12 .75Z"/></svg></span><span>Code <small>Coming soon</small></span></a>
+      </div>
+    </section>
+    <section id="abstract" class="abstract-section container section">
+      <h2>Abstract</h2>
+      <p>Recent text-to-motion generation methods have explored next-scale autoregression for modeling multi-scale motion dependencies and masked autoregression for refining fine-grained motion details, but these two paradigms are usually treated separately. In this work, we present a unified generative perspective and formulate both paradigms as masked autoregressive generation at the current scale conditioned on completed coarser-scale tokens. Based on this formulation, we propose MoMaScale, which jointly models cross-scale hierarchical dependencies and intra-scale iterative refinement through full-scale tokens from completed coarser scales and masked tokens at the current scale. A dual-role scale-wise attention mask is further introduced to regulate information flow across token roles and scales, enabling direct token-level cross-scale modeling without additional scale alignment. Experiments on standard text-to-motion benchmarks demonstrate the effectiveness of MoMaScale, which achieves the best Top-1 R-Precision (0.551) and FID (0.044) among compared methods on HumanML3D.</p>
+    </section>
+    <section id="gallery" class="section gallery-section">
+      <div class="container"><div class="section-top"><div><h2>Gallery</h2></div><div class="tabs" role="group" aria-label="Gallery dataset"><button type="button" data-gallery="0" aria-pressed="true">HumanML3D</button><button type="button" data-gallery="1" aria-pressed="false">SnapMoGen</button></div></div>
+      <h3 id="gallery-dataset" class="dataset-heading">Dataset: HumanML3D</h3>
+      <p id="gallery-description" class="dataset-description"></p>
+      <div class="gallery-meta"><span id="gallery-count"></span><label class="play-toggle"><input id="autoplay" type="checkbox"> Autoplay visible motions</label></div><div id="gallery-grid" class="gallery-grid"></div><noscript><p>Please enable JavaScript to explore the motion gallery and comparisons.</p></noscript></div>
+    </section>
+    <section id="method" class="section container">
+      <h2>Method</h2>
+      <div class="unified-formulation">
+        <h3>Unified Generation Formulation</h3>
+        <p>Suppose a motion sequence is represented by tokens at <i>S</i> scales, from the coarsest to the finest. At each scale <i>s</i>, tokens are partitioned into <i>K</i><sub>s</sub> groups to be recovered iteratively. Conditioned on the text description <i>c</i>, MoMaScale unifies coarse-to-fine generation across scales and iterative masked recovery within each scale:</p>
+        <div class="unified-equation" tabindex="0" role="region" aria-label="Unified generation equation">
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="p theta of q given c equals the product over scales s and groups k of p theta of X s k given earlier groups, coarser scales, and c">
+            <mrow>
+              <msub><mi>p</mi><mi>θ</mi></msub><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">|</mo><mi>c</mi><mo stretchy="false">)</mo><mo>=</mo>
+              <munderover><mo>∏</mo><mrow><mi>s</mi><mo>=</mo><mn>1</mn></mrow><mi>S</mi></munderover>
+              <munderover><mo>∏</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><msub><mi>K</mi><mi>s</mi></msub></munderover>
+              <msub><mi>p</mi><mi>θ</mi></msub><mo stretchy="false">(</mo>
+              <msup><mi>X</mi><mrow><mi>s</mi><mo>,</mo><mi>k</mi></mrow></msup><mo stretchy="false">|</mo>
+              <msup><mi>X</mi><mrow><mi>s</mi><mo>,</mo><mo lspace="0" rspace="0">&lt;</mo><mi>k</mi></mrow></msup><mo>,</mo>
+              <msup><mi>q</mi><mrow><mo lspace="0" rspace="0">&lt;</mo><mi>s</mi></mrow></msup><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo><mo>.</mo>
+            </mrow>
+          </math>
+        </div>
+        <p>Here, <i>q</i><sup>&lt;s</sup> denotes the completed coarser-scale prefix, and <i>X</i><sup>s,&lt;k</sup> denotes the token groups already recovered within the current scale. The model therefore captures both cross-scale hierarchical dependencies and intra-scale iterative refinement in the same conditional decomposition.</p>
+        <p>When <i>K</i><sub>s</sub> = 1 for all scales, each scale is generated in a single step and the formulation reduces to <strong>next-scale autoregression</strong>. When <i>S</i> = 1, it reduces to <strong>masked autoregression</strong>, with iterative token recovery within a single scale.</p>
+        <p>MoMaScale implements this formulation using full-scale tokens and masked tokens in a unified Transformer. A dual-role scale-wise attention mask lets masked tokens attend only to completed coarser-scale tokens and the current scale’s masked context, while full-scale tokens attend only to full-scale tokens at the same or coarser scales.</p>
+      </div>
+      <figure class="framework"><a href="assets/framework.png" target="_blank" rel="noopener" aria-label="Open full-resolution framework figure"><img src="assets/framework.png" alt="MoMaScale framework: motion encoding and multi-scale quantization produce full-scale and masked tokens, which are concatenated with T5 text tokens and processed by a unified Transformer." loading="lazy" width="1403" height="552"></a><figcaption><strong>Overall framework of MoMaScale.</strong> Motion tokens at multiple scales are organized into full-scale and randomly masked tokens, then concatenated with T5 text tokens. A unified Transformer equipped with the dual-role scale-wise attention mask predicts the masked positions.</figcaption></figure>
+      <figure class="inference-figure">
+        <a href="assets/infer_mask_h.png" target="_blank" rel="noopener" aria-label="Open full-resolution inference and attention mask figure"><img src="assets/infer_mask_h.png" alt="Coarse-to-fine iterative mask-predict inference and the dual-role scale-wise attention visibility matrix." loading="lazy" width="1185" height="526"></a>
+        <figcaption><strong>Inference and dual-role scale-wise attention mask.</strong> Each scale is iteratively recovered conditioned on completed coarser scales. Completed prefixes are cached and reused for finer-scale generation. Click the figure to view it at full resolution.</figcaption>
+      </figure>
+    </section>
+    <section id="results" class="section results-section"><div class="container"><div class="section-top"><div><h2>Quantitative Results</h2><p class="section-intro">Text–motion alignment and generation quality on two benchmarks.</p></div><div class="tabs" role="group" aria-label="Results dataset"><button type="button" data-results="0" aria-pressed="true">HumanML3D</button><button type="button" data-results="1" aria-pressed="false">SnapMoGen</button></div></div><div class="table-wrap" tabindex="0" role="region" aria-label="Quantitative results table, scroll horizontally on small screens"><table><caption id="results-caption"></caption><thead id="results-head"></thead><tbody id="results-body"></tbody></table></div><p class="table-note">Results from the manuscript, averaged over 20 runs; ± denotes a 95% confidence interval. ↑ Higher is better. ↓ Lower is better. † Reproduced results. Selected baselines are shown.</p></div></section>
+    <section id="comparison" class="section container"><div class="section-top"><div><h2>Comparison with Other Methods</h2></div><div class="tabs" role="group" aria-label="Comparison dataset"><button type="button" data-comparison="0" aria-pressed="true">HumanML3D</button><button type="button" data-comparison="1" aria-pressed="false">SnapMoGen</button></div></div><h3 id="comparison-dataset" class="dataset-heading">Dataset: HumanML3D</h3><div id="comparison-examples" class="comparison-examples"></div></section>
+    <section id="citation" class="section citation-section"><div class="container citation-layout"><div><h2>BibTeX</h2><p>If you find MoMaScale useful in your research,<br>please consider citing our work.</p></div><div class="citation-code"><div class="code-heading"><span>BibTeX</span><button type="button" id="copy-citation">Copy citation</button></div><pre><code id="bibtex">@misc{momascale,
+  title = {Unifying Next-Scale and Masked Autoregression
+           for Text-to-Motion Generation},
+  author = {Zhu, Liping and Ge, Yichen and Li, Chengyang
+            and Gao, Jian and Li, Hao and Liu, Xu
+            and Liang, Boqiang and Lin, Xiaojie
+            and Zhou, Heng}
+}</code></pre><p id="copy-status" class="copy-status" role="status"></p></div></div></section>
+  </main>
+  <footer class="container"><p>Unifying structure and detail in human motion.</p><a href="#main">Back to top ↑</a></footer>
+</body>
+</html>

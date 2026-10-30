@@ -1,0 +1,1 @@
+The figure walks in a counterclockwise circle, stopping at their starting point.
