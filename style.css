@@ -360,3 +360,62 @@ footer p,footer>a:last-child {font-size:11px;color:#6b7995}
   footer>a:last-child {font-size:10px;white-space:nowrap}
 }
 @media(forced-colors:active) {.hero h1 {background:none;color:CanvasText}}
+
+/* Comfortable reading sizes across text, captions, and quantitative tables. */
+body {font-size:17px}
+.site-header nav {font-size:14px}
+.header-link {font-size:13.5px}
+.authors {font-size:16.5px;max-width:1040px}
+.affiliations {font-size:16px}
+.author-notes {font-size:14.5px}
+.resource-link {font-size:15px}
+.resource-link small {font-size:12px}
+.abstract-section>p,.unified-formulation {font-size:17px;line-height:1.85}
+.section h2 {font-size:35px}
+.unified-formulation h3 {font-size:22px}
+.section-intro,.dataset-description {font-size:16px}
+.dataset-heading {font-size:20px}
+.gallery-meta {font-size:12.5px}
+.motion-card p {font-size:14.5px}
+.card-index {font-size:11.5px}
+.tabs button {font-size:13.5px}
+.framework figcaption,.inference-figure figcaption {font-size:14px}
+table {font-size:14px;min-width:780px}
+caption {font-size:13.5px}
+thead th {font-size:12.5px}
+tbody th {font-size:14px}
+.uncertainty {font-size:12px}
+.comparison-card figcaption {font-size:14.5px}
+.comparison-block blockquote {font-size:17px}
+.prompt-label {font-size:16px}
+.method-badge {font-size:10.5px}
+.button.compact {font-size:12.5px}
+.fine-print,.table-note {font-size:12.5px}
+.citation-layout>div>p:not(.eyebrow) {font-size:16px}
+.code-heading,.code-heading button {font-size:12.5px}
+pre {font-size:13.5px}
+.copy-status {font-size:12px}
+footer p,footer>a:last-child {font-size:12.5px}
+@media(max-width:650px) {
+  body {font-size:16px}
+  .site-header nav {font-size:12px}
+  .authors {font-size:14px;gap:7px 13px}
+  .affiliations {font-size:14px}
+  .author-notes {font-size:13px}
+  .resource-link {font-size:14px}
+  .resource-link small {font-size:11.5px}
+  .abstract-section>p,.unified-formulation {font-size:15.5px;line-height:1.85}
+  .section h2 {font-size:30px}
+  .unified-formulation h3 {font-size:20px}
+  .section-intro,.dataset-description {font-size:14.5px}
+  .dataset-heading {font-size:18px}
+  .gallery-meta {font-size:11.5px}
+  .tabs button {font-size:12.5px}
+  .motion-card p {font-size:14px}
+  .framework figcaption,.inference-figure figcaption {font-size:13px}
+  .comparison-block blockquote {font-size:15.5px}
+  .fine-print,.table-note {font-size:12px}
+  .citation-layout>div>p:not(.eyebrow) {font-size:15px}
+  pre {font-size:12px}
+  footer p,footer>a:last-child {font-size:11.5px}
+}
